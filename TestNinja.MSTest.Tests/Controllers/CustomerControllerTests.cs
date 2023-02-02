@@ -1,20 +1,33 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestNinja.Api.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Shouldly;
 
 namespace TestNinja.Api.Controllers.Tests
 {
     [TestClass()]
     public class CustomerControllerTests
     {
-        [TestMethod()]
-        public void GetCustomerTest()
+        private CustomerController _customerController;
+
+        public CustomerControllerTests()
         {
-            Assert.Fail();
+            _customerController = new CustomerController();
+        }
+
+        [TestMethod()]
+        [DataRow(0)]
+        [DataRow(-1)]
+        public void GetCustomerTest(int value)
+        {
+            var result = _customerController.GetCustomer(value);
+            result.ShouldBeOfType<NotFoundResult>();
+        }
+
+        [TestMethod()]
+        public void GetCustomer_IdNotZero_ShouldReturnOk()
+        {
+            var result = _customerController.GetCustomer(1);
+            result.ShouldBeOfType<OkResult>();
         }
     }
 }
