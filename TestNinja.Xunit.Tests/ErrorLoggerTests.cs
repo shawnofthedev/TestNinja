@@ -1,7 +1,8 @@
 ﻿using Shouldly;
 using System;
-using TestNinja.Fundamentals;
+using TestNinja.Lib;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace TestNinja.Tests
 {
@@ -9,10 +10,12 @@ namespace TestNinja.Tests
     public class ErrorLoggerTests : IDisposable
     {
         private ErrorLogger _logger;
+        private ITestOutputHelper _output;
 
-        public ErrorLoggerTests()
+        public ErrorLoggerTests(ITestOutputHelper output)
         {
             _logger = new ErrorLogger();
+            _output = output;
         }
 
         public void Dispose()
@@ -25,6 +28,7 @@ namespace TestNinja.Tests
         {
             _logger.Log("a");
             var lastError = _logger.LastError;
+            _output.WriteLine(lastError);
             lastError.ShouldBe("a");
         }
 

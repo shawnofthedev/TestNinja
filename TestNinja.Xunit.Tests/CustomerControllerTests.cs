@@ -1,7 +1,8 @@
 ﻿using Xunit;
-using TestNinja.Fundamentals;
 using System;
 using Shouldly;
+using TestNinja.Api.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TestNinja.Tests
 {
@@ -24,14 +25,14 @@ namespace TestNinja.Tests
         public void GetCustomer_IdIsZero_ShouldReturnNotFound()
         {
             var result = _controller.GetCustomer(0);
-            result.ShouldBeOfType<NotFound>();
+            result.ShouldBeOfType<NotFoundResult>();
         }
 
         [Fact]
         public void GetCustomer_IdIsNotZero_ShouldReturnOk()
         {
             var result = _controller.GetCustomer(1);
-            result.ShouldBeOfType<Ok>();
+            result.ShouldBeOfType<OkResult>();
         }
     }
 }

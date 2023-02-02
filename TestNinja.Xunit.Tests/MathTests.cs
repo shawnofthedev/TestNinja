@@ -1,9 +1,7 @@
 ﻿using Shouldly;
-using System;
 using System.Linq;
-using TestNinja.Fundamentals;
 using Xunit;
-using Math = TestNinja.Fundamentals.Math;
+using Math = TestNinja.Lib.Math;
 
 namespace TestNinja.Xunit.Tests
 {

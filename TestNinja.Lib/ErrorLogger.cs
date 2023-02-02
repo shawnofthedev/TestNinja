@@ -14,8 +14,8 @@
             LastError = error;
 
             //do the logging stuff
-
-            OnErrorLogged(Guid.NewGuid());
+            var errorId = Guid.NewGuid();
+            OnErrorLogged(errorId);
         }
 
         protected virtual void OnErrorLogged(Guid errorId)

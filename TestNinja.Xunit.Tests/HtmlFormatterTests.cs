@@ -1,5 +1,5 @@
 ﻿using Shouldly;
-using TestNinja.Fundamentals;
+using TestNinja.Lib;
 using Xunit;
 
 namespace TestNinja.Xunit.Tests

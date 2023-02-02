@@ -9,9 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNinja.Nunit.UnitTests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNinja.Xunit.Tests", "TestNinja.Xunit.Tests\TestNinja.Xunit.Tests.csproj", "{BA5CD452-3A1B-4BFE-941F-FF06C5E52BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNinja.Api", "TestNinja.Api\TestNinja.Api.csproj", "{91A99AA8-C532-4032-83FD-096DEC15B509}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNinja.Api", "TestNinja.Api\TestNinja.Api.csproj", "{91A99AA8-C532-4032-83FD-096DEC15B509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNinja.Lib", "TestNinja.Lib\TestNinja.Lib.csproj", "{1A016856-9BDC-4D85-BEA1-65C18A78D8EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNinja.Lib", "TestNinja.Lib\TestNinja.Lib.csproj", "{1A016856-9BDC-4D85-BEA1-65C18A78D8EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNinja.MSTest.Tests", "TestNinja.MSTest.Tests\TestNinja.MSTest.Tests.csproj", "{FC0D31E6-1E03-41EA-B83A-ED524AA6CE60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1A016856-9BDC-4D85-BEA1-65C18A78D8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A016856-9BDC-4D85-BEA1-65C18A78D8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A016856-9BDC-4D85-BEA1-65C18A78D8EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0D31E6-1E03-41EA-B83A-ED524AA6CE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0D31E6-1E03-41EA-B83A-ED524AA6CE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0D31E6-1E03-41EA-B83A-ED524AA6CE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0D31E6-1E03-41EA-B83A-ED524AA6CE60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
